@@ -1,0 +1,21 @@
+.index-entry {
+    display: inline-block;
+    padding: 2px 8px;
+    margin: 2px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 14px;
+    font-size: 80%;
+}
+
+
+.admonition.prereq {
+    border-left: 4px solid #0078d4;
+    background: #eaf4fb;
+    padding: 1em;
+    margin: 1em 0;
+    position: relative;
+}
+.admonition.prereq > .title:before {
+    content: "🛠️";
+    margi
