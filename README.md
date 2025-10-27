@@ -1,3 +1,6 @@
+[![Documentation Status](https://readthedocs.org/projects/kioptipack-blueprints/badge/?version=latest)](https://kioptipack-blueprints.readthedocs.io/en/latest/?badge=latest)
+---
+
 ![WZL-Logo](https://raw.githubusercontent.com/Alexander-Nasuta/Alexander-Nasuta/main/readme_images/logo.png)
 ![KIOptiPack-Banner](https://ki-hub-kunststoffverpackungen.de/fileadmin/_processed_/2/6/csm_keyvisual-11_7e2e959d7c.png)
 
@@ -116,13 +119,14 @@ Before setting up a project with KIOptiPack Blueprints, ensure that the followin
 
 Refer to the official documentation for detailed setup instructions and examples of how to implement Machine Learning use cases with the Blueprints.
 
-📘 [Blueprints Documentation](https://blueprint-dev-v2.readthedocs.io/en/latest/index.html)
+📘 [Blueprints Documentation](https://kioptipack-blueprints.readthedocs.io/en/latest/)
 
 ---
 
 ## 🔗 Useful Links
 
-- [Blueprints & Documentation of this Repo](https://blueprint-dev-v2.readthedocs.io/en/latest/index.html)
+- [Blueprints & Documentation of this Repository](https://kioptipack-blueprints.readthedocs.io/en/latest/)
+- [Blueprints Github Repository](https://github.com/Alexander-Nasuta/kioptipack-blueprints)
 - [KIOptiPack Dataprocessing Package Documentation](https://kioptipack-dataprocessing.readthedocs.io/en/latest/)
 - [Demo Application](https://github.com/Alexander-Nasuta/openhub-demo) 
 - [KIOptiPack Website (English)](https://ki-hub-kunststoffverpackungen.de/en/kioptipack/about)
