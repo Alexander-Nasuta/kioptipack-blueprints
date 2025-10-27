@@ -7,14 +7,35 @@ Below you find the code snippets for both services.
 ```{prereq}
 - A **FastioT Project** created via the FastIoT CLI. 
     - You can find more information on how to create a FastIoT Project in the [FastIoT Documentation](https://fastiot.readthedocs.io/en/latest/tutorials/part_1_getting_started/01_first_project_setup.html).
+- **Doker** installed and running on your machine (for example by installing [Docker Desktop](https://www.docker.com/products/docker-desktop/)).
 - **MongoDB** as a database to save the data.
   - Make sure you have a **running** MongoDB instance. 
   - You can check if MongoDB is running by executing `mongod --version` in your terminal. 
+- install the required dependencies for the services. See the "Dependency Installation" section below.
 ```
 
 ```{tutorial}
 You Can find a Video Tutorial on how to create a FastIoT Project and add Services in the tutorials section of the documentation.
 ```
+
+```{note}
+The imports from `kio` namespace are part of the `kio-dataprocessing` package, which provides simplified communication with the FastIoT broker.
+```
+---
+
+## Dependency Installation
+
+The following Blueprint requires the `pymongo` package to connect to the MongoDB database.
+You can install it via pip:
+```bash
+pip install pymongo
+```
+The Blueprint also requires the `kio-dataprocessing` for simplified broker communication.
+You can install it via pip:
+```bash
+pip install kio-dataprocessing
+```
+
 ---
 
 ## Mongo Database Service
@@ -65,6 +86,11 @@ You can create a new service in your FastIoT project via the FastIoT CLI:
 ---
 
 ## Running the Services
+
+```{note}
+Make sure that you have run `fiot config` at least once in your project directory to set up the FastIoT broker configuration.
+For more information, refer to the [FastIoT Documentation](https://fastiot.readthedocs.io/en/latest/tutorials/part_1_getting_started/02_fiot_config.html).
+```
 
 To run the services do the following:
 1. Start your MongoDB instance if it is not already running.

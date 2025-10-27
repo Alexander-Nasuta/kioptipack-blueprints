@@ -28,6 +28,7 @@ This modular approach allows you to:
 ```{toctree}
 :maxdepth: 2
 
+tutorial-system-setup
 tutorial-save-data
 tutorial-data-processing-pipeline
 tutorial-pytorch-training

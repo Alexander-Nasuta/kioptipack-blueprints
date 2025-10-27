@@ -6,13 +6,15 @@ This documentation is currently under construction. Blueprints are added and upd
 Blueprints require the a **Linux** or **MacOS** operating system due to dependencies on FastIoT.
 ```
 
+---
+
 ```{include} ../../README.md
 :relative-images:
 ```
 
 ---
 
-# Documentation Content
+## 🗂️ Documentation Content
 ```{toctree}
 :caption: 'Contents:'
 :maxdepth: 2
@@ -24,7 +26,7 @@ genindex
 ```
 ---
 
-# Contact Us
+## ✉️ Contact Us
 
 If you have any questions, feel free to reach out to us:
 
@@ -37,8 +39,7 @@ If you have any questions, feel free to reach out to us:
 
 ---
 
-# Indices and tables
+## 🧭 Indices
 
 - {ref}`genindex`
-- {ref}`modindex`
-- {ref}`search`
+
