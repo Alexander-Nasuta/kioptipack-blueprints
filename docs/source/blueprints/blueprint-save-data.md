@@ -19,7 +19,7 @@ You Can find a Video Tutorial on how to create a FastIoT Project and add Service
 ```
 
 ```{note}
-The imports from `kio` namespace are part of the `kio-dataprocessing` package, which provides simplified communication with the FastIoT broker.
+The imports from `kio` namespace are part of the `kioptipack-dataprocessing` package, which provides simplified communication with the FastIoT broker.
 ```
 ---
 
@@ -30,10 +30,10 @@ You can install it via pip:
 ```bash
 pip install pymongo
 ```
-The Blueprint also requires the `kio-dataprocessing` for simplified broker communication.
+The Blueprint also requires the `kioptipack-dataprocessing` for simplified broker communication.
 You can install it via pip:
 ```bash
-pip install kio-dataprocessing
+pip install kioptipack-dataprocessing
 ```
 
 ---
