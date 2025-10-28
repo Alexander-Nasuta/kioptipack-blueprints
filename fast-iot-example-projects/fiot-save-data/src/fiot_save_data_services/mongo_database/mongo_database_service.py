@@ -76,7 +76,8 @@ class MongoDatabaseService(FastIoTService):
 
         # add uuids to data points
         for data_point in data_points:
-            data_point["_id"] = str(uuid.uuid4())
+            if "_id" not in data_point:
+                data_point["_id"] = str(uuid.uuid4())
 
         self._logger.info(f"Inserting data points into mongodb")
         res: InsertManyResult = self._raw_data_collection.insert_many(data_points)

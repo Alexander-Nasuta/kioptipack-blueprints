@@ -21,6 +21,11 @@ You Can find a Video Tutorial on how to create a FastIoT Project and add Service
 ```{note}
 The imports from `kio` namespace are part of the `kioptipack-dataprocessing` package, which provides simplified communication with the FastIoT broker.
 ```
+```{tip}
+If you name the servervices **exactly** as shown in this Blueprint, you can simply copy and paste the code snippets into the respective service files created by the FastIoT CLI.
+- Mongo Database Service: **MongoDatabaseService** (created by running `fiot create service mongo_database`)
+- Data Source Service: **DataSourceService** (created by running `fiot create service data_source`)
+```
 ---
 
 ## Dependency Installation
@@ -39,7 +44,9 @@ pip install kioptipack-dataprocessing
 ---
 
 ## Mongo Database Service
-```{index} single: Database; MongoDB;
+```{index} single: Database 
+```
+```{index} single: MongoDB
 ```
 
 ```{raw} html
@@ -90,6 +97,14 @@ You can create a new service in your FastIoT project via the FastIoT CLI:
 ```{note}
 Make sure that you have run `fiot config` at least once in your project directory to set up the FastIoT broker configuration.
 For more information, refer to the [FastIoT Documentation](https://fastiot.readthedocs.io/en/latest/tutorials/part_1_getting_started/02_fiot_config.html).
+```
+
+```{note}
+If you named your project differently than `fiot-save-data`, the path to the service directories will differ accordingly.
+```
+
+```{tip}
+If you are using pycharm, you can run the services directly from the IDE by clicking the green play button in the gutter next to the `run.py` files in the respective service directories.
 ```
 
 To run the services do the following:
