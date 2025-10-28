@@ -110,6 +110,7 @@ In this example we excluded a lot of fields to keep the blueprint concise.
 
 ```{tip}
 Check out the [**Open Hub Days Demo Project**](https://github.com/Alexander-Nasuta/openhub-demo) for a more comprehensive implementation of a data processing pipeline.
+In that project a more sophisticated data processing pipeline is implemented.
 ```
 
 ```{note}
@@ -185,14 +186,16 @@ The Blueprint uses the **defaulf MongoDB connection** parameters. If you left th
 ```
 ---
 ## Data Processing Service
+
 ```{index} single: Dataprocessing
 ```
+
 ```{raw} html
 <span class="index-entry">Dataprocessing</span>
 ```
+
 This service periodically fetches raw data from the MongoDB database via the Database Service, processes it using a predefined data processing pipeline, and stores the processed data back in the database.
 
-```{note}
 
 ```{literalinclude} ../../../fast-iot-example-projects/fiot-data-processing-pipeline/src/fiot_data_processing_pipeline_services/data_processing/data_processing_service.py
 :language: python
