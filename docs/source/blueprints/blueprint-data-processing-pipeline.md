@@ -225,15 +225,15 @@ To run the services do the following:
    ```bash
    fiot start integration_test
    ```
-3. Run the **Mongo Database Service** using the `run.py` python file in the service directory:
+3. Run the **Mongo Database Service** using the `run.py` python file. You can use the **green play button ▶️** in PyCharm or run the following command in your terminal:
    ```bash
    python src/fiot_data_processing_pipeline/mongo_database/run.py
    ```
-4. Run the **Data Source Service** using the `run.py` python file in the service directory:
+4. Run the **Data Source Service** using the `run.py` python file. You can use the **green play button ▶️** in PyCharm or run the following command in your terminal:
    ```bash
    python src/fiot_data_processing_pipeline/data_source/run.py
    ```
-5. Run the **Data Processing Service** using the `run.py` python file in the service directory:
+5. Run the **Data Processing Service** using the `run.py` python file. You can use the **green play button ▶️** in PyCharm or run the following command in your terminal:
    ```bash
    python src/fiot_data_processing_pipeline/data_source/run.py
    ```
