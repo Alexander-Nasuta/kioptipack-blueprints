@@ -236,7 +236,7 @@ To run the services do the following:
    ```
    
 ---
-### Verifying Data Processing
+## Verifying Data Processing
 To verify that the data is being stored correctly in MongoDB, you can use the MongoDB shell or a GUI tool like MongoDB Compass to check the contents of the specified collection in your database.
 1. Open the MongoDB shell or MongoDB Compass.
 2. Connect to your MongoDB instance. 
