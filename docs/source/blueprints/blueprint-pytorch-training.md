@@ -17,7 +17,7 @@ _ **mlflow** server running.
 
 ```{tip}
 If you name the servervices **exactly** as shown in this Blueprint, you can simply copy and paste the code snippets into the respective service files created by the FastIoT CLI.
-- Mongo Database Service: **MongoDatabaseService** (created by running `fiot new-service service mongo_database`)
+- Mongo Database Service: **MongoDatabaseService** (created by running `fiot create new-service mongo_database`)
 - Data Source Service: **DataSourceService** (created by running `fiot create new-service data_source`)
 - Data Processing Service: **DataProcessingService** (created by running `fiot create new-service data_processing`)
 - Pytroch Training Service: **PytorchTrainingService** (created by running `fiot create new-service pytorch_training`)
@@ -78,7 +78,7 @@ This is especially useful if you want to use GPU acceleration via CUDA.
 
 ---
 
-# Data Source Service
+## Data Source Service
 ```{index} single: Dataset;
 ```
 ```{raw} html
