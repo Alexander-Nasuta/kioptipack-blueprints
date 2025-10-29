@@ -2,4 +2,6 @@ sphinx-autobuild docs/source docs/build/html --open-browser
 
 sphinx-autobuild docs/source docs/build/html
 
+mlflow server --host 127.0.0.1 --port 8080
+
 fiot create new-project fiot_data_processing_pipeline

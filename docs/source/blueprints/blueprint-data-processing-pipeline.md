@@ -14,10 +14,6 @@ This abstraction allows to easily change the database implementation (for exampl
 - install the required dependencies for the services. See the "Dependency Installation" section below.
 ```
 
-```{tutorial}
-You Can find a Video Tutorial on how to create a FastIoT Project and add Services in the tutorials section of the documentation.
-```
-
 ```{note}
 The imports from `kio` namespace are part of the `kioptipack-dataprocessing` package, which provides simplified communication with the FastIoT broker.
 ```
@@ -29,16 +25,16 @@ So make sure to not forget to add the additional functionality to the Database S
 
 ```{tip}
 If you name the servervices **exactly** as shown in this Blueprint, you can simply copy and paste the code snippets into the respective service files created by the FastIoT CLI.
-- Mongo Database Service: **MongoDatabaseService** (created by running `fiot create service mongo_database`)
-- Data Source Service: **DataSourceService** (created by running `fiot create service data_source`)
-- Data Processing Service: **DataProcessingService** (created by running `fiot create service data_processing`)
+- Mongo Database Service: **MongoDatabaseService** (created by running `fiot new-service service mongo_database`)
+- Data Source Service: **DataSourceService** (created by running `fiot create new-service data_source`)
+- Data Processing Service: **DataProcessingService** (created by running `fiot create new-service data_processing`)
 ```
 
 ---
 
 ## Description
 
-This set of Blueprints consists of three main services:
+This set of Blueprints consists of three services:
 1. **Data Source Service**: This service features a dataset, that will be saved to the MongoDB database via the FastIoT broker.
 2. **Mongo Database Service**: This service connects to a MongoDB database and listens for incoming data messages from the FastIoT broker. Upon receiving data, it saves the raw data to a specified collection in the MongoDB database.
 3. **Data Processing Service**: This service periodically fetches raw data from the MongoDB database via the Database Service, processes it using a predefined data processing pipeline, and stores the processed data back in the database.
@@ -249,4 +245,17 @@ You should see the data entries being added to the collection as they are receiv
 Below you can find an example of how the data entries might look in the MongoDB collection:
 
 ![Blueprints](../_static/blueprint-dataprocessing-pipeline-expected-mongo-screenshot.png)
+
+---
+
+## Tutorial 
+
+Below you can find a video tutorial that walks you through the steps of setting up and running the Data Processing Pipeline Blueprint.
+
+```{raw} html
+<video width="640" controls poster="https://raw.githubusercontent.com/Alexander-Nasuta/Alexander-Nasuta/main/readme_images/logo.png">
+  <source src="https://rwth-aachen.sciebo.de/s/goJWH5HLEre4qgB/download/KIOptiPack-Data-Processing-Pipeline.mov" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+```
 

@@ -14,17 +14,14 @@ Below you find the code snippets for both services.
 - install the required dependencies for the services. See the "Dependency Installation" section below.
 ```
 
-```{tutorial}
-You Can find a Video Tutorial on how to create a FastIoT Project and add Services in the tutorials section of the documentation.
-```
-
 ```{note}
 The imports from `kio` namespace are part of the `kioptipack-dataprocessing` package, which provides simplified communication with the FastIoT broker.
 ```
+
 ```{tip}
 If you name the servervices **exactly** as shown in this Blueprint, you can simply copy and paste the code snippets into the respective service files created by the FastIoT CLI.
-- Mongo Database Service: **MongoDatabaseService** (created by running `fiot create service mongo_database`)
-- Data Source Service: **DataSourceService** (created by running `fiot create service data_source`)
+- Mongo Database Service: **MongoDatabaseService** (created by running `fiot create new-service mongo_database`)
+- Data Source Service: **DataSourceService** (created by running `fiot create new-service data_source`)
 ```
 ---
 
@@ -139,5 +136,18 @@ You should see the data entries being added to the collection as they are receiv
 Below you can find an example of how the data entries might look in the MongoDB collection:
 
 ![Blueprints](../_static/blueprint-sava-data-expected-mongo-state.png)
+
+---
+
+## Tutorial Video
+
+Below you can find a video tutorial that walks you through the steps of setting up and running the Save Data Blueprint services.
+
+```{raw} html
+<video width="640" controls poster="https://raw.githubusercontent.com/Alexander-Nasuta/Alexander-Nasuta/main/readme_images/logo.png">
+  <source src="https://rwth-aachen.sciebo.de/s/YXLzKzG9MxKFQqN/download/KIOPtipack-Sava-Data_Blueprint-Tutorial.mov" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+```
 
 
