@@ -20,8 +20,8 @@ They provide ready-to-use templates that streamline the development of ML servic
 blueprint-save-data
 blueprint-data-processing-pipeline
 blueprint-pytorch-training
+blueprint-model-serving
 blueprint-lightgbm-training
 blueprint-tensorflow-training
 blueprint-apheris-training
-blueprint-model-serving
 ```

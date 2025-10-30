@@ -10,8 +10,6 @@ For Experiment tracking [**mlflow**](http://mlflow.org) is used.
 - **MongoDB** as a database to save the data.
   - Make sure you have a **running** MongoDB instance. 
   - You can check if MongoDB is running by executing `mongod --version` in your terminal.
-_ **mlflow** server running.
-  - You can start the mlflow locally by executing `mlflow server --host 127.0.0.1 --port 8080`
 - install the required dependencies for the services. See the "Dependency Installation" section below.
 ```
 
@@ -21,7 +19,8 @@ If you name the servervices **exactly** as shown in this Blueprint, you can simp
 - Data Source Service: **DataSourceService** (created by running `fiot create new-service data_source`)
 - Data Processing Service: **DataProcessingService** (created by running `fiot create new-service data_processing`)
 - Pytroch Training Service: **PytorchTrainingService** (created by running `fiot create new-service pytorch_training`)
-- Pytroch Training Service: **PytorchServingService** (created by running `fiot create new-service pytorch_serving`)
+- Pytroch Serving Service: **PytorchServingService** (created by running `fiot create new-service pytorch_serving`)
+- ML Consumer Service: **MlConsumerService** (created by running `fiot create new-service ml_consumer`)
 ```
 
 ---
@@ -33,6 +32,8 @@ This set of Blueprints consists of four main services:
 2. **Mongo Database Service**: This service connects to a MongoDB database and listens for incoming data messages from the FastIoT broker. Upon receiving data, it saves the raw data to a specified collection in the MongoDB database.
 3. **Data Processing Service**: This service periodically fetches raw data from the MongoDB database via the Database Service, processes it using a predefined data processing pipeline, and stores the processed data back in the database.
 4. **Pytorch Training Service**: This service retrieves the processed data from the Database Service, trains a regression model using PyTorch, and logs the training process, results and model weights to a mlflow server.
+5. **Pytorch Serving Service**: This service loads the trained PyTorch model from the mlflow server and serves it via the FastIoT broker for inference.
+6. **ML Consumer Service**: This service consumes predictions by querying the Pytorch Serving Service via the FastIoT broker.
 
 For details about the data processing pipeline, please refer to the *Data Processing Blueprint*.
 
@@ -79,7 +80,13 @@ This is especially useful if you want to use GPU acceleration via CUDA.
 
 ---
 
-# Data Source Service
+## Services
+
+Below you find the code snippets for all services included in this Blueprint.
+
+---
+
+### Data Source Service
 ```{index} single: Dataset;
 ```
 ```{raw} html
@@ -90,14 +97,14 @@ The Data Source Service holds a dataset and sends the data to the FastIoT broker
 In this example the dataset is loaded from the `kioptipack-dataprocessing` package.
 In your own implementation you can replace this with loading your own dataset from a CSV file or any other source.
 
-```{literalinclude} ../../../fast-iot-example-projects/fiot-pytorch-training/src/fiot_pytorch_training_services/data_source/data_source_service.py
+```{literalinclude} ../../../fast-iot-example-projects/fiot-pytorch-serving/src/fiot_pytroch_serving_services/data_source/data_source_service.py
 :language: python
 :linenos: true
 ```
 
 ---
 
-## Mongo Database Service
+### Mongo Database Service
 ```{index} single: Database 
 ```
 ```{index} single: MongoDB
@@ -122,12 +129,12 @@ The Blueprint uses the **defaulf MongoDB connection** parameters. If you left th
  - `_db_host`: the host your MongoDB instance is running on (default: `localhost`)
 ```
 
-```{literalinclude} ../../../fast-iot-example-projects/fiot-pytorch-training/src/fiot_pytorch_training_services/mongo_database/mongo_database_service.py
+```{literalinclude} ../../../fast-iot-example-projects/fiot-pytorch-serving/src/fiot_pytroch_serving_services/mongo_database/mongo_database_service.py
 :language: python
 :linenos: true
 ```
 ---
-## Data Processing Service
+### Data Processing Service
 
 ```{index} single: Dataprocessing
 ```
@@ -139,17 +146,38 @@ The Blueprint uses the **defaulf MongoDB connection** parameters. If you left th
 This service periodically fetches raw data from the MongoDB database via the Database Service, processes it using a predefined data processing pipeline, and stores the processed data back in the database.
 
 
-```{literalinclude} ../../../fast-iot-example-projects/fiot-pytorch-training/src/fiot_pytorch_training_services/data_processing/data_processing_service.py
+```{literalinclude} ../../../fast-iot-example-projects/fiot-pytorch-serving/src/fiot_pytroch_serving_services/data_processing/data_processing_service.py
 :language: python
 :linenos: true
 ```
 
 ---
 
-## PyTorch Training Service
+### PyTorch Training Service
 This service retrieves the processed data from the Database Service, trains a regression model using PyTorch, and logs the training process, results and model weights to a mlflow server.
 
-```{literalinclude} ../../../fast-iot-example-projects/fiot-pytorch-training/src/fiot_pytorch_training_services/pytorch_training/pytorch_training_service.py
+```{literalinclude} ../../../fast-iot-example-projects/fiot-pytorch-serving/src/fiot_pytroch_serving_services/pytorch_training/pytorch_training_service.py
+:language: python
+:linenos: true
+```
+
+---
+
+### PyTorch Serving Service
+This service loads the trained PyTorch model from the mlflow server and serves it via the FastIoT broker for inference.
+
+```{literalinclude} ../../../fast-iot-example-projects/fiot-pytorch-serving/src/fiot_pytroch_serving_services/pytorch_serving/pytorch_serving_service.py
+:language: python
+:linenos: true
+```
+
+---
+
+### ML Consumer Service
+
+This service consumes predictions by querying the Pytorch Serving Service via the FastIoT broker.
+
+```{literalinclude} ../../../fast-iot-example-projects/fiot-pytorch-serving/src/fiot_pytroch_serving_services/ml_consumer/ml_consumer_service.py
 :language: python
 :linenos: true
 ```
@@ -164,7 +192,7 @@ For more information, refer to the [FastIoT Documentation](https://fastiot.readt
 ```
 
 ```{note}
-If you named your project differently than `fiot-pytorch-training`, the path to the service directories will differ accordingly.
+If you named your project differently than `fiot-pytorch-serving`, the path to the service directories will differ accordingly.
 ```
 
 ```{tip}
@@ -183,20 +211,34 @@ To run the services do the following:
    ```
 3. Run the **Mongo Database Service** using the `run.py` python file. You can use the **green play button ▶️** in PyCharm or run the following command in your terminal:
    ```bash
-   python src/fiot_pytorch_training_services/mongo_database/run.py
+   python src/fiot_pytroch_serving_services/mongo_database/run.py
    ```
 4. Run the **Data Source Service** using the `run.py` python file. You can use the **green play button ▶️** in PyCharm or run the following command in your terminal:
    ```bash
-   python src/fiot_pytorch_training_services/data_source/run.py
+   python src/fiot_pytroch_serving_services/data_source/run.py
    ```
 5. Run the **Data Processing Service** using the `run.py` python file. You can use the **green play button ▶️** in PyCharm or run the following command in your terminal:
    ```bash
-   python src/fiot_pytorch_training_services/data_source/run.py
+   python src/fiot_pytroch_serving_services/data_source/run.py
    ```
 6. Run the **PyTorch Training Service** using the `run.py` python file. You can use the **green play button ▶️** in PyCharm or run the following command in your terminal:
    ```bash
-    python src/fiot_pytorch_training_services/pytorch_training/run.py
-    ```
-   
+   python src/fiot_pytroch_serving_services/pytorch_training/run.py
+   ```
+7. Run the **PyTorch Serving Service** using the `run.py` python file. You can use the **green play button ▶️** in PyCharm or run the following command in your terminal:
+   ```bash
+   python src/fiot_pytroch_serving_services/pytorch_serving/run.py
+   ```
+8. Run the **ML Consumer Service** using the `run.py` python file. You can use the **green play button ▶️** in PyCharm or run the following command in your terminal:
+   ```bash
+   python src/fiot_pytroch_serving_services/ml_consumer/run.py
+   ```
+
 ---
 
+## Viewing the Results
+
+When running the services, you should be able to see the following results in the **ML Consumer Service** console output:
+
+
+![Blueprints](../_static/ml-consumer-output.png)

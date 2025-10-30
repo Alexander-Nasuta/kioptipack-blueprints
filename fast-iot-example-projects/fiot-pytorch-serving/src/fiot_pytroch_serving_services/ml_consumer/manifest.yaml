@@ -1,0 +1,5 @@
+fastiot-service:
+  name: ml_consumer
+
+  depends-on:
+    - nats

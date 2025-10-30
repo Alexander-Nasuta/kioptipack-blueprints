@@ -1,0 +1,5 @@
+fastiot-service:
+  name: pytorch_serving
+
+  depends-on:
+    - nats
