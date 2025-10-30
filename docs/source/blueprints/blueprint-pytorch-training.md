@@ -10,8 +10,6 @@ For Experiment tracking [**mlflow**](http://mlflow.org) is used.
 - **MongoDB** as a database to save the data.
   - Make sure you have a **running** MongoDB instance. 
   - You can check if MongoDB is running by executing `mongod --version` in your terminal.
-_ **mlflow** server running.
-  - You can start the mlflow locally by executing `mlflow server --host 127.0.0.1 --port 8080`
 - install the required dependencies for the services. See the "Dependency Installation" section below.
 ```
 
@@ -78,7 +76,13 @@ This is especially useful if you want to use GPU acceleration via CUDA.
 
 ---
 
-## Data Source Service
+## Services
+
+Below you find the code snippets for all services included in this Blueprint.
+
+---
+
+### Data Source Service
 ```{index} single: Dataset;
 ```
 ```{raw} html
@@ -96,7 +100,7 @@ In your own implementation you can replace this with loading your own dataset fr
 
 ---
 
-## Mongo Database Service
+### Mongo Database Service
 ```{index} single: Database 
 ```
 ```{index} single: MongoDB
@@ -126,7 +130,7 @@ The Blueprint uses the **defaulf MongoDB connection** parameters. If you left th
 :linenos: true
 ```
 ---
-## Data Processing Service
+### Data Processing Service
 
 ```{index} single: Dataprocessing
 ```
@@ -145,7 +149,7 @@ This service periodically fetches raw data from the MongoDB database via the Dat
 
 ---
 
-## PyTorch Training Service
+### PyTorch Training Service
 This service retrieves the processed data from the Database Service, trains a regression model using PyTorch, and logs the training process, results and model weights to a mlflow server.
 
 ```{literalinclude} ../../../fast-iot-example-projects/fiot-pytorch-training/src/fiot_pytorch_training_services/pytorch_training/pytorch_training_service.py
@@ -198,7 +202,7 @@ To run the services do the following:
     ```
    
 ---
-## Verifying Model Training
+### Verifying Model Training
 
 After running the PyTorch Training Service, you can verify that the model training was successful by checking the mlflow tracking server.
 You can do this by opening your web browser and navigating to `http://127.0.0.1:8080`.

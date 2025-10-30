@@ -40,7 +40,7 @@ html_static_path = ['_static']
 html_css_files = ['custom.css']
 
 html_logo = '_static/logo-optipack.svg'
-html_title = 'KIOptiPack BluePrints'
+html_title = 'KIOptiPack Blueprints'
 
 copybutton_prompt_text = ">>> "
 copybutton_prompt_is_regexp = False

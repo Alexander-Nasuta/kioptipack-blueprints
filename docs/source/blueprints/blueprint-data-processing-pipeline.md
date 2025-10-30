@@ -133,7 +133,13 @@ pip install kioptipack-dataprocessing
 
 ---
 
-## Data Source Service
+## Services
+
+Below you find the code snippets for all services included in this Blueprint.
+
+---
+
+### Data Source Service
 ```{index} single: Dataset;
 ```
 ```{raw} html
@@ -151,7 +157,7 @@ In your own implementation you can replace this with loading your own dataset fr
 
 ---
 
-## Mongo Database Service
+### Mongo Database Service
 ```{index} single: Database 
 ```
 ```{index} single: MongoDB
@@ -181,7 +187,7 @@ The Blueprint uses the **defaulf MongoDB connection** parameters. If you left th
 :linenos: true
 ```
 ---
-## Data Processing Service
+### Data Processing Service
 
 ```{index} single: Dataprocessing
 ```
@@ -235,7 +241,7 @@ To run the services do the following:
    ```
    
 ---
-## Verifying Data Processing
+### Verifying Data Processing
 To verify that the data is being stored correctly in MongoDB, you can use the MongoDB shell or a GUI tool like MongoDB Compass to check the contents of the specified collection in your database.
 1. Open the MongoDB shell or MongoDB Compass.
 2. Connect to your MongoDB instance. 
