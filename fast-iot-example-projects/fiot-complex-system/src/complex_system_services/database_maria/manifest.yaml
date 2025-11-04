@@ -1,0 +1,5 @@
+fastiot-service:
+  name: database_maria
+
+  depends-on:
+    - nats

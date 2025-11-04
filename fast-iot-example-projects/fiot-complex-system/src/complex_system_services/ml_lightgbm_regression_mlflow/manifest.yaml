@@ -1,0 +1,5 @@
+fastiot-service:
+  name: ml_lightgbm_regression_mlflow
+
+  depends-on:
+    - nats

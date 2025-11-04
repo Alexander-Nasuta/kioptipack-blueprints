@@ -1,0 +1,5 @@
+fastiot-service:
+  name: ml_tensorflow_regression_mlflow
+
+  depends-on:
+    - nats

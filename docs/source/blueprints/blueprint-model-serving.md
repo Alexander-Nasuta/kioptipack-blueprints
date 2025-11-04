@@ -41,7 +41,24 @@ For details about the data processing pipeline, please refer to the *Data Proces
 
 ## Dependency Installation
 ```{note}
-If you have already installed the dependencies in the Save Data Blueprint example, you can skip this section.
+If you have already installed the dependencies in the Pytroch Training Blueprint example, you can skip this section.
+```
+
+The following Blueprint requires the `pymongo` package to connect to the MongoDB database.
+You can install it via pip:
+```bash
+pip install pymongo
+```
+The Blueprint also requires the `kioptipack-dataprocessing` for simplified broker communication.
+You can install it via pip:
+```bash
+pip install kioptipack-dataprocessing
+```
+
+For experiment tracking the `mlflow` package is required.
+You can install it via pip:
+```bash
+pip install mlflow
 ```
 
 The following Blueprint requires the `pymongo` package to connect to the MongoDB database.

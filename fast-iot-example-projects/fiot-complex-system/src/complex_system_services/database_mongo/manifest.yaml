@@ -1,0 +1,5 @@
+fastiot-service:
+  name: database_mongo
+
+  depends-on:
+    - nats

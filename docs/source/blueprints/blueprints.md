@@ -21,7 +21,6 @@ blueprint-save-data
 blueprint-data-processing-pipeline
 blueprint-pytorch-training
 blueprint-model-serving
-blueprint-lightgbm-training
-blueprint-tensorflow-training
+blueprint-multi-model
 blueprint-apheris-training
 ```

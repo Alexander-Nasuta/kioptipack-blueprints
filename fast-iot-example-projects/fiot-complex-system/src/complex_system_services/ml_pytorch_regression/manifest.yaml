@@ -1,0 +1,5 @@
+fastiot-service:
+  name: ml_pytorch_regression
+
+  depends-on:
+    - nats

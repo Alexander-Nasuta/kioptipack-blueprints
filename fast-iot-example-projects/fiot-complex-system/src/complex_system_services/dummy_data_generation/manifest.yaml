@@ -1,0 +1,5 @@
+fastiot-service:
+  name: dummy_data_generation
+
+  depends-on:
+    - nats
