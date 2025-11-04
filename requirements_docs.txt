@@ -10,3 +10,5 @@ pandoc
 typing_extensions>=4.12.0
 nbsphinx
 pandoc
+jupyter
+nbconvert
