@@ -15,7 +15,7 @@ Make sure you have a mental model of how Apheris Federated Learning works, i.e. 
 
 ```{prereq}
 - An **Apheris Account**. 
-- An **Apheris Environment** (also called Organi).
+- An **Apheris Environment** (also called Organization).
 - An Server with the **Apheris Compute Gateway** installed. 
     - for the installation you receive zip file `apheris-gateway-vx.y.z.zip` with a `deploy_gateway` bash script and a configuration file `values.yaml`.
 - Python Packages:
