@@ -1,4 +1,4 @@
-# MLflow Model Serving
+# Pytroch Model Serving
 
 This set of blueprints demonstrates how to train a regression model using PyTorch with the FastIoT framework.
 It builds on top of the *Data Processing Blueprint* to showcase the complete workflow from data ingestion to model training.
@@ -242,3 +242,16 @@ When running the services, you should be able to see the following results in th
 
 
 ![Blueprints](../_static/ml-consumer-output.png)
+
+
+## Tutorial 
+
+Below you can find a video tutorial that walks you through the steps of setting up and running the Model Serving Blueprint services.
+
+```{raw} html
+<video width="640" controls poster="https://raw.githubusercontent.com/Alexander-Nasuta/Alexander-Nasuta/main/readme_images/logo.png">
+  <source src="https://rwth-aachen.sciebo.de/s/rbJrpXgmZ8fTNKB/download/KIOptiPack-Pytroch-Serving.mov" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+```
+

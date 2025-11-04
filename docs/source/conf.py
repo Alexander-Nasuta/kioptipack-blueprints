@@ -16,6 +16,7 @@ release = '1.0.0'
 
 extensions = [
     "myst_parser",
+
     "sphinx.ext.duration",
     "sphinx.ext.autosectionlabel",
     "sphinx.ext.autodoc",
@@ -23,7 +24,9 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.autosummary',
     'sphinx.ext.autosectionlabel',
-    'sphinx_copybutton'
+    'sphinx_copybutton',
+
+    "nbsphinx",
 ]
 
 templates_path = ['_templates']
@@ -44,6 +47,10 @@ html_title = 'KIOptiPack Blueprints'
 
 copybutton_prompt_text = ">>> "
 copybutton_prompt_is_regexp = False
+
+nbsphinx_execute = 'never'     # 'auto' oder 'always' falls Ausführung gewünscht
+nbsphinx_timeout = 60
+nbsphinx_allow_errors = True
 
 
 
