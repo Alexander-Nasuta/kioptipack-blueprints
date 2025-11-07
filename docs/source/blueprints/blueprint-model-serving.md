@@ -104,10 +104,15 @@ Below you find the code snippets for all services included in this Blueprint.
 ---
 
 ### Data Source Service
-```{index} single: Dataset;
+```{index} triple: Dataset; Data Source; Model Serving
 ```
+```{index} triple: Blueprint; Data Source; Model Serving
+```
+
 ```{raw} html
 <span class="index-entry">Dataset</span>
+<span class="index-entry">Data Source</span>
+<span class="index-entry">Model Serving</span>
 ```
 
 The Data Source Service holds a dataset and sends the data to the FastIoT broker to be saved in the MongoDB database via the Database Service.
@@ -122,14 +127,16 @@ In your own implementation you can replace this with loading your own dataset fr
 ---
 
 ### Mongo Database Service
-```{index} single: Database 
+```{index} triple: Database; MongoDB; Model Serving
 ```
-```{index} single: MongoDB
+
+```{index} tiple: Blueprint; MongoDB; Model Serving 
 ```
 
 ```{raw} html
 <span class="index-entry">Database</span>
 <span class="index-entry">MongoDB</span>
+<span class="index-entry">Model Serving</span>
 ```
 This service connects to a MongoDB database and saves incoming data to a specified collection.
 It listens for messages on a specific subject from the FastIoT broker and inserts the received data into the MongoDB collection.
@@ -153,11 +160,15 @@ The Blueprint uses the **defaulf MongoDB connection** parameters. If you left th
 ---
 ### Data Processing Service
 
-```{index} single: Dataprocessing
+```{index} double: Data Processing Pipleline; Model Serving
+```
+
+```{index} triple: Blueprint; Pipleline Service; Model Serving 
 ```
 
 ```{raw} html
-<span class="index-entry">Dataprocessing</span>
+<span class="index-entry">Data Processing Pipleline</span>
+<span class="index-entry">Model Serving</span>
 ```
 
 This service periodically fetches raw data from the MongoDB database via the Database Service, processes it using a predefined data processing pipeline, and stores the processed data back in the database.
@@ -171,6 +182,17 @@ This service periodically fetches raw data from the MongoDB database via the Dat
 ---
 
 ### PyTorch Training Service
+```{index} double: PyTorch Training; Model Serving
+```
+
+```{index} triple: Blueprint; Training Service; Model Serving
+``` 
+
+```{raw} html
+<span class="index-entry">PyTorch Training</span>
+<span class="index-entry">Model Serving</span>
+```
+
 This service retrieves the processed data from the Database Service, trains a regression model using PyTorch, and logs the training process, results and model weights to a mlflow server.
 
 ```{literalinclude} ../../../fast-iot-example-projects/fiot-pytorch-serving/src/fiot_pytroch_serving_services/pytorch_training/pytorch_training_service.py
@@ -181,6 +203,16 @@ This service retrieves the processed data from the Database Service, trains a re
 ---
 
 ### PyTorch Serving Service
+```{index} double: PyTorch Serving; Model Serving
+```
+
+```{index} triple: Blueprint; Serving Service; Model Serving 
+```
+
+```{raw} html
+<span class="index-entry">PyTorch Serving</span>
+<span class="index-entry">Model Serving</span>
+```
 This service loads the trained PyTorch model from the mlflow server and serves it via the FastIoT broker for inference.
 
 ```{literalinclude} ../../../fast-iot-example-projects/fiot-pytorch-serving/src/fiot_pytroch_serving_services/pytorch_serving/pytorch_serving_service.py
@@ -191,6 +223,16 @@ This service loads the trained PyTorch model from the mlflow server and serves i
 ---
 
 ### ML Consumer Service
+```{index} double: ML Consumer; Model Serving
+```
+
+```{index} triple: Blueprint; Consumer Service; Model Serving 
+```
+
+```{raw} html
+<span class="index-entry">ML Consumer</span>
+<span class="index-entry">Model Serving</span>
+```
 
 This service consumes predictions by querying the Pytorch Serving Service via the FastIoT broker.
 

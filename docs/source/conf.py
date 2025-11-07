@@ -25,6 +25,7 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.autosectionlabel',
     'sphinx_copybutton',
+    'sphinx_togglebutton',
 
     "nbsphinx",
 ]
@@ -51,6 +52,9 @@ copybutton_prompt_is_regexp = False
 nbsphinx_execute = 'never'     # 'auto' oder 'always' falls Ausführung gewünscht
 nbsphinx_timeout = 60
 nbsphinx_allow_errors = True
+
+togglebutton_hint = ""
+togglebutton_hint_hide = ""
 
 
 

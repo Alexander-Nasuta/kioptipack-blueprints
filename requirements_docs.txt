@@ -12,3 +12,4 @@ nbsphinx
 pandoc
 jupyter
 nbconvert
+sphinx-togglebutton

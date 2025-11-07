@@ -100,6 +100,16 @@ pip install tensorflow
 ---
 
 ### Data Processing Service
+```{index} double: Data Processing; Multi Model System
+```
+
+```{index} triple: Blueprint; Pipeline Service; Multi Model System
+```
+
+```{raw} html
+<span class="index-entry">Data Processing</span>
+<span class="index-entry">Multi Model System</span>
+```
 
 This service periodically fetches raw data from the Database Service, runs the processing pipeline and stores processed data back to the database.
 
@@ -111,6 +121,17 @@ This service periodically fetches raw data from the Database Service, runs the p
 ---
 
 ### Database MariaDB Service
+```{index} tiple: Database; MariaDB; Multi Model System
+```
+
+```{index} tiple: Blueprint; MariaDB Service; Multi Model System
+```
+
+```{raw} html
+<span class="index-entry">Database</span>
+<span class="index-entry">MariaDB</span>
+<span class="index-entry">Multi Model System</span>
+```
 
 ```{literalinclude} ../../../fast-iot-example-projects/fiot-complex-system/src/complex_system_services/database_maria/database_maria_service.py
 :language: python
@@ -120,6 +141,17 @@ This service periodically fetches raw data from the Database Service, runs the p
 ---
 
 ### Database MongoDB Service
+```{index} tiple: Database; MongoDB; Multi Model System
+```
+
+```{index} tiple: Blueprint; MongoDB Service; Multi Model System
+```
+
+```{raw} html
+<span class="index-entry">Database</span>
+<span class="index-entry">MongoDB</span>
+<span class="index-entry">Multi Model System</span>
+```
 
 ```{literalinclude} ../../../fast-iot-example-projects/fiot-complex-system/src/complex_system_services/database_mongo/database_mongo_service.py
 :language: python
@@ -129,6 +161,13 @@ This service periodically fetches raw data from the Database Service, runs the p
 ---
 
 ### Dummy Data Generation Service
+```{index} double: Dummy Data Generation; Multi Model System
+```
+
+```{raw} html
+<span class="index-entry">Dummy Data Generation</span>
+<span class="index-entry">Multi Model System</span>
+```
 
 ```{literalinclude} ../../../fast-iot-example-projects/fiot-complex-system/src/complex_system_services/dummy_data_generation/dummy_data_generation_service.py
 :language: python
@@ -138,6 +177,16 @@ This service periodically fetches raw data from the Database Service, runs the p
 ---
 
 ### ML Consumer Service
+```{index} double: ML Consumer; Multi Model System
+```
+
+```{index} triple: Blueprint; ML Consumer; Multi Model System
+```
+
+```{raw} html
+<span class="index-entry">ML Consumer</span>
+<span class="index-entry">Multi Model System</span>
+```
 
 ```{literalinclude} ../../../fast-iot-example-projects/fiot-complex-system/src/complex_system_services/ml_consumer/ml_consumer_service.py
 :language: python
@@ -147,6 +196,16 @@ This service periodically fetches raw data from the Database Service, runs the p
 ---
 
 ### ML LightGBM Regression MLflow Service
+```{index} double: LightGBM; Multi Model System
+```
+
+```{index} triple: Blueprint; LightGBM; Multi Model System
+```
+
+```{raw} html
+<span class="index-entry">LightGBM</span>
+<span class="index-entry">Multi Model System</span>
+```
 
 ```{literalinclude} ../../../fast-iot-example-projects/fiot-complex-system/src/complex_system_services/ml_lightgbm_regression_mlflow/ml_lightgbm_regression_mlflow_service.py
 :language: python
@@ -156,6 +215,16 @@ This service periodically fetches raw data from the Database Service, runs the p
 ---
 
 ### ML Pytorch Regression Service
+```{index} double: Pytorch; Multi Model System
+```
+
+```{index} triple: Blueprint; Pytorch; Multi Model System
+```
+
+```{raw} html
+<span class="index-entry">Pytorch</span>
+<span class="index-entry">Multi Model System</span>
+```
 
 ```{literalinclude} ../../../fast-iot-example-projects/fiot-complex-system/src/complex_system_services/ml_pytorch_regression/ml_pytorch_regression_service.py
 :language: python
@@ -165,6 +234,16 @@ This service periodically fetches raw data from the Database Service, runs the p
 ---
 
 ### ML Pytorch Regression MLflow Service
+```{index} double: Pytorch MLflow; Multi Model System
+```
+
+```{index} triple: Blueprint; Pytorch MLflow; Multi Model System
+```
+
+```{raw} html
+<span class="index-entry">Pytorch MLflow</span>
+<span class="index-entry">Multi Model System</span>
+```
 
 ```{literalinclude} ../../../fast-iot-example-projects/fiot-complex-system/src/complex_system_services/ml_pytorch_regression_mlflow/ml_pytorch_regression_mlflow_service.py
 :language: python
@@ -174,6 +253,16 @@ This service periodically fetches raw data from the Database Service, runs the p
 ---
 
 ### ML Tensorflow Regression MLflow Service
+```{index} double: Tensorflow MLflow; Multi Model System
+```
+
+```{index} triple: Blueprint; Tensorflow MLflow; Multi Model System
+```
+
+```{raw} html
+<span class="index-entry">Tensorflow MLflow</span>
+<span class="index-entry">Multi Model System</span>
+```
 
 ```{literalinclude} ../../../fast-iot-example-projects/fiot-complex-system/src/complex_system_services/ml_tensorflow_regression_mlflow/ml_tensorflow_regression_mlflow_service.py
 :language: python
@@ -183,6 +272,16 @@ This service periodically fetches raw data from the Database Service, runs the p
 ---
 
 ### ML Monitoring Service
+```{index} double: ML Monitoring; Multi Model System
+```
+
+```{index} triple: Blueprint; ML Monitoring; Multi Model System
+```
+
+```{raw} html
+<span class="index-entry">ML Monitoring</span>
+<span class="index-entry">Multi Model System</span>
+```
 
 ```{literalinclude} ../../../fast-iot-example-projects/fiot-complex-system/src/complex_system_services/ml_monitoring/ml_monitoring_service.py
 :language: python
@@ -192,6 +291,17 @@ This service periodically fetches raw data from the Database Service, runs the p
 ---
 
 ### ML Serving Service
+```{index} triple: Model Serving; wandb; Multi Model System
+```
+
+```{index} triple: Blueprint; WandB Model Serving; Multi Model System
+```
+
+```{raw} html
+<span class="index-entry">Model Serving</span>
+<span class="index-entry">wandb</span>
+<span class="index-entry">Multi Model System</span>
+```
 
 ```{literalinclude} ../../../fast-iot-example-projects/fiot-complex-system/src/complex_system_services/ml_serving/ml_serving_service.py
 :language: python
@@ -201,6 +311,17 @@ This service periodically fetches raw data from the Database Service, runs the p
 ---
 
 ### ML Serving MLflow Service
+```{index} double: Model Serving; mlflow; Multi Model System
+```
+
+```{index} triple: Blueprint; mlflow Model Serving; Multi Model System
+```
+
+```{raw} html
+<span class="index-entry">Model Serving</span>
+<span class="index-entry">mlflow</span>
+<span class="index-entry">Multi Model System</span>
+```
 
 ```{literalinclude} ../../../fast-iot-example-projects/fiot-complex-system/src/complex_system_services/ml_serving_mlflow/ml_serving_mlflow_service.py
 :language: python

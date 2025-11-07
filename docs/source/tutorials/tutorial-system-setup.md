@@ -1,4 +1,11 @@
 # System Setup Tutorial
+```{index} triple: System Setup; Tutorial; Ubuntu
+```
+```{raw} html
+<span class="index-entry">System Setup</span>
+<span class="index-entry">Tutorial</span>
+<span class="index-entry">Ubuntu</span>
+```
 
 ```{important}
 The following instructions are tailored for **Ubuntu 24.04 LTS**. If you're using a different version, please adjust accordingly.

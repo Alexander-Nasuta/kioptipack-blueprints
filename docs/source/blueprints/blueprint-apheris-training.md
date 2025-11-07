@@ -1,4 +1,7 @@
 # Apheris Federated Learning
+```{index} double: Blueprint; Apheris
+```
+
 The Apheris Gateway is a federated end-to-end solution for building and joining data networks. The Gateway is designed and developed as a security-hardened, privacy-preserving, and scalable product, providing multi-layered safeguards to protect data confidentiality and IP within data networks.
 This Blueprint demonstrates how to the Apheris System in order to tackel the same use case as in the other Blueprints.
 
@@ -44,11 +47,25 @@ It was exported as a CSV file and uploaded to the **Server** running the Apheris
 --- 
 
 ## Asset Policy
+```{index} double: Asset Policy; Apheris
+```
+
+```{raw} html
+<span class="index-entry">Asset Policy</span>
+<span class="index-entry">Apheris</span>
+```
 
 The Asset Policy defines the rules for accessing and using the dataset in the federated learning task.
 ![Apheris Orga](../_static/apheris_policy.PNG)
 
 ## KIOptiPack Model 
+```{index} double: Example Model; Apheris
+```
+
+```{raw} html
+<span class="index-entry">Example Model</span>
+<span class="index-entry">Apheris</span>
+```
 This Model is a 1:1 port of the PyTorch model used in the PyTorch Blueprint.
 
 ![Apheris Orga](../_static/apheris_model.PNG)
@@ -61,6 +78,14 @@ This ensures that data privacy is maintained and that sensitive information is n
 ![Apheris Orga](../_static/apheris_orga.PNG)
 
 --- 
+```{index} triple: Apheris; Federated Learning; Training
+```
+
+```{raw} html
+<span class="index-entry">Apheris</span>
+<span class="index-entry">Federated Learning</span>
+<span class="index-entry">Training</span>
+```
 
 The following notebook provides a step-by-step guide on how to use the Apheris System to train the KIOptiPack Model on the KIOptiPack Dataset using Federated Learning.
 

@@ -140,10 +140,14 @@ Below you find the code snippets for all services included in this Blueprint.
 ---
 
 ### Data Source Service
-```{index} single: Dataset;
+```{index} double: Data Source; Dataset
 ```
+```{index} triple: Blueprint; Data Source; Data Processing Pipeline
+```
+
 ```{raw} html
 <span class="index-entry">Dataset</span>
+<span class="index-entry">Data Source</span>
 ```
 
 The Data Source Service holds a dataset and sends the data to the FastIoT broker to be saved in the MongoDB database via the Database Service.
@@ -158,14 +162,15 @@ In your own implementation you can replace this with loading your own dataset fr
 ---
 
 ### Mongo Database Service
-```{index} single: Database 
+```{index} triple: Database; MongoDB; Data Processing Pipeline
 ```
-```{index} single: MongoDB
+```{index} triple: Blueprint; MongoDB; Data Processing Pipeline
 ```
 
 ```{raw} html
 <span class="index-entry">Database</span>
 <span class="index-entry">MongoDB</span>
+<span class="index-entry">Data Processing Pipeline</span>
 ```
 This service connects to a MongoDB database and saves incoming data to a specified collection.
 It listens for messages on a specific subject from the FastIoT broker and inserts the received data into the MongoDB collection.
@@ -189,11 +194,13 @@ The Blueprint uses the **defaulf MongoDB connection** parameters. If you left th
 ---
 ### Data Processing Service
 
-```{index} single: Dataprocessing
+```{index} single: Data Processing Pipeline
+```
+```{index} triple: Blueprint; Pipeline Service; Data Processing Pipeline
 ```
 
 ```{raw} html
-<span class="index-entry">Dataprocessing</span>
+<span class="index-entry">Data Processing Pipeline</span>
 ```
 
 This service periodically fetches raw data from the MongoDB database via the Database Service, processes it using a predefined data processing pipeline, and stores the processed data back in the database.

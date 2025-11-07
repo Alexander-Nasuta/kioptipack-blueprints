@@ -83,10 +83,16 @@ Below you find the code snippets for all services included in this Blueprint.
 ---
 
 ### Data Source Service
-```{index} single: Dataset;
+```{index} triple: Dataset; Data Source; Pytorch Training
 ```
+
+```{index} triple: Blueprint; Data Source; Pytorch Training
+```
+
 ```{raw} html
 <span class="index-entry">Dataset</span>
+<span class="index-entry">Data Source</span>
+<span class="index-entry">Pytorch Training</span>
 ```
 
 The Data Source Service holds a dataset and sends the data to the FastIoT broker to be saved in the MongoDB database via the Database Service.
@@ -101,14 +107,16 @@ In your own implementation you can replace this with loading your own dataset fr
 ---
 
 ### Mongo Database Service
-```{index} single: Database 
+```{index} triple: Database; MongoDB; Pytorch Training
 ```
-```{index} single: MongoDB
+
+```{index} triple: Blueprint; MongoDB; Pytorch Training
 ```
 
 ```{raw} html
 <span class="index-entry">Database</span>
 <span class="index-entry">MongoDB</span>
+<span class="index-entry">Pytorch Training</span>
 ```
 This service connects to a MongoDB database and saves incoming data to a specified collection.
 It listens for messages on a specific subject from the FastIoT broker and inserts the received data into the MongoDB collection.
@@ -132,11 +140,17 @@ The Blueprint uses the **defaulf MongoDB connection** parameters. If you left th
 ---
 ### Data Processing Service
 
-```{index} single: Dataprocessing
+```{index} double: Data Processing Pipleline; Pytorch Training
 ```
 
+
+```{index} triple: Blueprint; Pipeline Service; Pytorch Training
+```
+
+
 ```{raw} html
-<span class="index-entry">Dataprocessing</span>
+<span class="index-entry">Data Processing Pipleline</span>
+<span class="index-entry">Pytorch Training</span>
 ```
 
 This service periodically fetches raw data from the MongoDB database via the Database Service, processes it using a predefined data processing pipeline, and stores the processed data back in the database.
@@ -150,6 +164,17 @@ This service periodically fetches raw data from the MongoDB database via the Dat
 ---
 
 ### PyTorch Training Service
+```{index} double: Pytorch Training; ML Model
+```
+
+```{index} triple: Blueprint; Training Service; Pytorch Training
+```
+
+```{raw} html
+<span class="index-entry">Pytorch Training</span>
+<span class="index-entry">ML Model</span>
+```
+
 This service retrieves the processed data from the Database Service, trains a regression model using PyTorch, and logs the training process, results and model weights to a mlflow server.
 
 ```{literalinclude} ../../../fast-iot-example-projects/fiot-pytorch-training/src/fiot_pytorch_training_services/pytorch_training/pytorch_training_service.py

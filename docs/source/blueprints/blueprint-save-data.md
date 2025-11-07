@@ -47,14 +47,16 @@ Below you find the code snippets for all services included in this Blueprint.
 ---
 
 ### Mongo Database Service
-```{index} single: Database 
+```{index} triple: Database; MongoDB; Save Data
 ```
-```{index} single: MongoDB
+
+```{index} tiple: Blueprint; MongoDB; Sensor Data 
 ```
 
 ```{raw} html
 <span class="index-entry">Database</span>
 <span class="index-entry">MongoDB</span>
+<span class="index-entry">Save Data</span>
 ```
 This service connects to a MongoDB database and saves incoming data to a specified collection.
 It listens for messages on a specific subject from the FastIoT broker and inserts the received data into the MongoDB collection.
@@ -80,6 +82,16 @@ The Blueprint uses the **defaulf MongoDB connection** parameters. If you left th
 ---
 
 ### Data Source Service
+```{index} double: Data Source; Sensor Data 
+```
+```{index} tiple: Blueprint; Data Source; Sensor Data 
+```
+
+```{raw} html
+<span class="index-entry">Data Source</span>
+<span class="index-entry">Sensor Data</span>
+```
+
 This service generates and sends data to the FastIoT broker at regular intervals.
 The data is sent on a specific subject that the Mongo Database Service listens to.
 
