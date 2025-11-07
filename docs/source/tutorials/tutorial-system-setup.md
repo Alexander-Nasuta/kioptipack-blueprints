@@ -117,7 +117,7 @@ libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
 ```
 
 
-## 🐳 3. Install Docker
+## 3. Install Docker
 ```{important}
 The following steps follow the official Docker installation guide for Ubuntu.
 These might change over time, so always refer to the [official Docker documentation](https://docs.docker.com/engine/install/ubuntu/) for the most up-to-date instructions.
@@ -130,7 +130,7 @@ In this section, you’ll install and verify Docker on **Ubuntu Lapton**, follow
 
 ---
 
-## 🔍 Check for Existing Docker Packages
+## Check for Existing Docker Packages
 
 Before installing Docker, remove any unofficial or older packages that might conflict with the official version.
 
@@ -147,7 +147,7 @@ Then, clean up residual dependencies:
 sudo apt-get autoremove
 ```
 
-### 🧩 Check Virtualization Support
+### Check Virtualization Support
 Docker relies on virtualization features of your CPU to run efficiently.
 To confirm that virtualization is supported and enabled:
 
@@ -160,7 +160,7 @@ If the command shows no output, it means virtualization is not enabled.
 You’ll need to enable it in your BIOS or UEFI settings (usually under “Advanced → CPU Configuration”).
 ```
 
-### ⚙️ Verify KVM Support
+### Verify KVM Support
 KVM (Kernel-based Virtual Machine) enhances container performance.
 Check if KVM modules are active:
 
@@ -172,7 +172,7 @@ If you see no output, load the module manually:
 sudo modprobe kvm
 ```
 
-### 🔒 Check Ownership of /dev/kvm
+### Check Ownership of /dev/kvm
 Verify that your user has the correct permissions for virtualization:
 
 ```bash
@@ -188,7 +188,7 @@ sudo usermod -aG kvm $USER
 You’ll need to log out and log back in (or restart your session) for this change to take effect.
 ```
 
-### 🧰 Ensure QEMU Version ≥ 5.2
+### Ensure QEMU Version ≥ 5.2
 Some Docker configurations rely on QEMU, especially when running virtual machines.
 Update your system and install QEMU if necessary:
 
@@ -198,7 +198,7 @@ sudo apt-get upgrade
 sudo apt-get install qemu-system
 ```
 
-### 🪄 Verify Init System
+### Verify Init System
 Ubuntu uses systemd as its init system by default, which is compatible with Docker.
 You can verify this with:
 ```
@@ -206,7 +206,7 @@ ps --no-headers -o comm 1
 ```
 If the output is `systemd`, you’re good to go!
 
-### 🖥️ Check Desktop Environment
+### Check Desktop Environment
 Docker Desktop requires a supported graphical environment if you plan to use it (e.g. for managing containers visually).
 Check your current desktop environment:
 ```bash
@@ -214,7 +214,7 @@ echo $XDG_CURRENT_DESKTOP
 ```
 Supported environments include **GNOME**, **KDE**, or **MATE**.
 
-### 🔐 (Optional) Install Password Manager
+### (Optional) Install Password Manager
 ```{note}
 This is not needed to execute the blueprints in this documentation.
 ```
@@ -223,7 +223,7 @@ If you plan to access private Docker registries, install a password manager like
 sudo apt-get install pass
 ```
 
-### 📦 Set Up Docker’s Official APT Repository
+### Set Up Docker’s Official APT Repository
 
 Now we’ll add Docker’s official repository to ensure you get the latest stable version.
 
@@ -254,7 +254,7 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-### 🧪 Verify Installation
+### Verify Installation
 After installation, confirm that Docker is running correctly.
 Check Docker version:
 ```bash
@@ -275,7 +275,7 @@ https://docs.docker.com/desktop/install/linux-install/
 
 
 
-## 💻 4. Install PyCharm
+## 4. Install PyCharm
 PyCharm is a professional Python IDE developed by JetBrains, offering excellent debugging, environment management, and project tools.
 Check your system architecture
 ```
