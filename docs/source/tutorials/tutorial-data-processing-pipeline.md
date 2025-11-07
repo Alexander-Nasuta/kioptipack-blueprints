@@ -15,7 +15,7 @@ The guide follows these steps:
 4. **Verify Data Processing**: Steps to check the processed data in the MongoDB database
 
 ```{raw} html
-<video width="640" controls poster="https://raw.githubusercontent.com/Alexander-Nasuta/Alexander-Nasuta/main/readme_images/logo.png">
+<video width="640" controls poster="https://rwth-aachen.sciebo.de/public.php/dav/files/xoKCpNqy3k25Jrj/Folie4.PNG">
   <source src="https://rwth-aachen.sciebo.de/s/goJWH5HLEre4qgB/download/KIOptiPack-Data-Processing-Pipeline.mov" type="video/mp4">
   Your browser does not support the video tag.
 </video>

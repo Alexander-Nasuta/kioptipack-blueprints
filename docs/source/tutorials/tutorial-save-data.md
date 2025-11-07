@@ -15,7 +15,7 @@ The guid follows these steps:
 5. **Verify Data Processing**: Steps to check the processed data in the MongoDB database.
 
 ```{raw} html
-<video width="640" controls poster="https://raw.githubusercontent.com/Alexander-Nasuta/Alexander-Nasuta/main/readme_images/logo.png">
+<video width="640" controls poster="https://rwth-aachen.sciebo.de/public.php/dav/files/xoKCpNqy3k25Jrj/Folie3.PNG">
   <source src="https://rwth-aachen.sciebo.de/s/YXLzKzG9MxKFQqN/download/KIOPtipack-Sava-Data_Blueprint-Tutorial.mov" type="video/mp4">
   Your browser does not support the video tag.
 </video>

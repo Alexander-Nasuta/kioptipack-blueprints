@@ -23,7 +23,7 @@ It covers the following steps:
 ## Tutorial Video
 
 ```{raw} html
-<video width="640" controls poster="https://raw.githubusercontent.com/Alexander-Nasuta/Alexander-Nasuta/main/readme_images/logo.png">
+<video width="640" controls poster="https://rwth-aachen.sciebo.de/public.php/dav/files/xoKCpNqy3k25Jrj/Folie6.PNG">
   <source src="https://rwth-aachen.sciebo.de/s/rbJrpXgmZ8fTNKB/download/KIOptiPack-Pytroch-Serving.mov" type="video/mp4">
   Your browser does not support the video tag.
 </video>

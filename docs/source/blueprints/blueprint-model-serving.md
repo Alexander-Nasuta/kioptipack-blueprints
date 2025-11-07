@@ -308,7 +308,7 @@ When running the services, you should be able to see the following results in th
 Below you can find a video tutorial that walks you through the steps of setting up and running the Model Serving Blueprint services.
 
 ```{raw} html
-<video width="640" controls poster="https://raw.githubusercontent.com/Alexander-Nasuta/Alexander-Nasuta/main/readme_images/logo.png">
+<video width="640" controls poster="https://rwth-aachen.sciebo.de/public.php/dav/files/xoKCpNqy3k25Jrj/Folie6.PNG">
   <source src="https://rwth-aachen.sciebo.de/s/rbJrpXgmZ8fTNKB/download/KIOptiPack-Pytroch-Serving.mov" type="video/mp4">
   Your browser does not support the video tag.
 </video>

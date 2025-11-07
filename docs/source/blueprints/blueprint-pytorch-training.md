@@ -242,7 +242,7 @@ Here you should see the mlflow UI with the experiments and runs logged by the Py
 Below you can find a video tutorial that walks you through the steps of setting up and running the PyTorch Training Blueprint services.
 
 ```{raw} html
-<video width="640" controls poster="https://raw.githubusercontent.com/Alexander-Nasuta/Alexander-Nasuta/main/readme_images/logo.png">
+<video width="640" controls poster="https://rwth-aachen.sciebo.de/public.php/dav/files/xoKCpNqy3k25Jrj/Folie5.PNG">
   <source src="https://rwth-aachen.sciebo.de/s/ZiS3HxetQ6KmnwY/download/KIOptiPack-Pytorch-Training.mov" type="video/mp4">
   Your browser does not support the video tag.
 </video>

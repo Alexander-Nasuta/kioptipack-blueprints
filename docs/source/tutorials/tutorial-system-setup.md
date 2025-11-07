@@ -24,7 +24,7 @@ This tutorial walks you through preparing a fresh Ubuntu Leapton system with all
 You can follow along with the accompanying video or execute the commands directly below.
 
 ```{raw} html
-<video width="640" controls poster="https://raw.githubusercontent.com/Alexander-Nasuta/Alexander-Nasuta/main/readme_images/logo.png">
+<video width="640" controls poster="https://rwth-aachen.sciebo.de/public.php/dav/files/xoKCpNqy3k25Jrj/Folie1.PNG">
   <source src="https://rwth-aachen.sciebo.de/s/mxoxLmH34NBeN5Z/download/KIOptiPack-System-Setup-Tutorial.mov" type="video/mp4">
   Your browser does not support the video tag.
 </video>

@@ -266,7 +266,7 @@ Below you can find an example of how the data entries might look in the MongoDB 
 Below you can find a video tutorial that walks you through the steps of setting up and running the Data Processing Pipeline Blueprint.
 
 ```{raw} html
-<video width="640" controls poster="https://raw.githubusercontent.com/Alexander-Nasuta/Alexander-Nasuta/main/readme_images/logo.png">
+<video width="640" controls poster="https://rwth-aachen.sciebo.de/public.php/dav/files/xoKCpNqy3k25Jrj/Folie4.PNG">
   <source src="https://rwth-aachen.sciebo.de/s/goJWH5HLEre4qgB/download/KIOptiPack-Data-Processing-Pipeline.mov" type="video/mp4">
   Your browser does not support the video tag.
 </video>
